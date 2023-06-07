@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Bancario - Conta Corrente</title>
+    <link rel="stylesheet" href="estilos_cc.css">
+</head>
+<body>
+    <form name ="conta_corente" method="post"
+    action="conta_corrente_exibir.php"></form>
+    <table>
+        <caption> Cadastro de Conta Corrente</caption>
+        <tr>
+            <td><label for="nome">Nome:</label></td>
+            <td><input type="text" name="nome" size="40"
+                maxlength="50" required placeholder ="Informe o nome completo do correntista" required></td>
+        </tr>
+        <tr>
+            <td><label for="agencia">Agência:</label></td>
+            <td>
+                <select name="banco">
+                    <option value="#"></option>
+                    <option value="caixa">Caixa Econmica Federal </option>
+                    <option value="brasil">Banco do Brasil</option>
+                    <option value="mercantil">Banco Mercantil</option>
+                    <option value="santander">Banco Santander</option>
+                    <option value="bradesco"> Banco do Bradesco</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="conta_corrente">Conta corrente:</label></td>
+            <td><input type="text" name="conta_corrente" size="25" maxlength="25"
+            required </td>
+        </tr>
+        <tr>
+            <td><label for="tipo_conta">Tipo de Conta </td>
+                <td class="td"><input type="radio" name="conta_comum"> <label for="conta_comun">Conta Comum</label>
+        
+                    <input type="radio" name="conta_especial"> Conta Especial
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="data_abertura"> Data da abertura:</label>
+                <td><input type="date" name="data_abertura" required></td>
+                
+            </tr>
+            <tr>
+                    <td><label for="saldo_inicial "> Saldo inicial</label></td>
+                      <td><input type="number" name="saldo_inicial" step="0.01" value="0"></td>
+                        
+
+                </tr>
+            <tr> <td colspan="2" align="center">
+                <input type="submit" name="cadastrar" value="cadastrar" class="botao"></tr>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
